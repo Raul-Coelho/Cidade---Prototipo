@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Allan');
+
+
+h2{
+ font-family: allan;
+}
+
+.cidades {
+    width: 25%;
+    display: inline-table;
+}
