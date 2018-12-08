@@ -6,16 +6,16 @@ import com.vividsolutions.jts.geom.Geometry;
 public class Cidade {
     private String nome;
     private Integer populacao;
-    private Integer idestado;
+    private Integer estado_id;
     private Float area;
     private Geometry geom;
 
     public Cidade(){};
 
-    public Cidade(String nome, Integer populacao, Integer idestado, Float area, Geometry geom) {
+    public Cidade(String nome, Integer populacao, Integer estado_id, Float area, Geometry geom) {
         this.nome = nome;
         this.populacao = populacao;
-        this.idestado = idestado;
+        this.estado_id = estado_id;
         this.area = area;
         this.geom = geom;
     }
@@ -32,12 +32,12 @@ public class Cidade {
         return populacao;
     }
 
-    public Integer getIdestado() {
-        return idestado;
+    public Integer getEstado_id() {
+        return estado_id;
     }
 
-    public void setIdestado(Integer idestado) {
-        this.idestado = idestado;
+    public void setEstado_id(Integer estado_id) {
+        this.estado_id = estado_id;
     }
 
     public void setPopulacao(Integer populacao) {

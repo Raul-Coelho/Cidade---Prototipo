@@ -72,6 +72,7 @@
                     <svg viewBox="" width="600" heigth="200">
                         <path d="${cidade1.getSvg()}" stroke="black" stroke-width="0.005" fill="orange" fill-opacity=""/>
                         <path d="${cidade2.getSvg()}" stroke="black" stroke-width="0.005" fill="blue" fill-opacity=""/>
+
                     </svg>
                 </div>
             </div>

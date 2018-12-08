@@ -10,7 +10,7 @@ public class ConnectionFactory {
 
         Class.forName("org.postgresql.Driver");
 
-        String url = "jdbc:postgresql://localhost:5432/ifchannel";
+        String url = "jdbc:postgresql://localhost:5432/Brasil";
         String usuario = "postgres";
         String senha = "coelho";
 
