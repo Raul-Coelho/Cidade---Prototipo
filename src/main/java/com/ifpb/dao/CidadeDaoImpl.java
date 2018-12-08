@@ -13,7 +13,6 @@ public class CidadeDaoImpl implements CidadeDAO {
 
     public ConnectionFactory factory;
 
-
     public CidadeDaoImpl(){
         factory = new ConnectionFactory();
     }
@@ -34,4 +33,6 @@ public class CidadeDaoImpl implements CidadeDAO {
         }
         return null;
     }
+
+
 }
