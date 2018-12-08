@@ -63,6 +63,20 @@ public class CidadeDaoImpl implements CidadeDAO {
 
     @Override
     public String getViewBox(Cidade cidade1, Cidade cidade2) throws SQLException, ClassNotFoundException {
+        try(Connection connection = factory.getConnection()){
 
+            PreparedStatement stmt = connection.prepareStatement
+                    ("SELECT getViewBoxCidade(?,?,?,?)");
+            stmt.setString(1, cidade1.getNome());
+            stmt.setString(2,cidade2.getNome());
+            stmt.setInt(3,cidade1.getEstado_id());
+            stmt.setInt(4,cidade2.getEstado_id());
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                return rs.getString(1);
+            }
+        }
+
+        return null;
     }
 }
