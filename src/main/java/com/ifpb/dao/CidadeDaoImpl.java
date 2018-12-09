@@ -27,8 +27,7 @@ public class CidadeDaoImpl implements CidadeDAO {
         List<String> estados = new ArrayList<>();
         try(Connection connection = factory.getConnection()){
             PreparedStatement st = connection.prepareStatement(
-                            "SELECT nome " +
-                            "FROM estados");
+                            "SELECT nome FROM estados");
 
             ResultSet resultSet = st.executeQuery();
 
@@ -86,7 +85,7 @@ public class CidadeDaoImpl implements CidadeDAO {
     }
 
     @Override
-    public Cidade buscarCidadeEstado(String cidadeParam, String estadoParam) throws SQLException, ClassNotFoundException, ParseException {
+    public Cidade buscarInfoCidade(String cidadeParam, String estadoParam) throws SQLException, ClassNotFoundException, ParseException {
         try (Connection connection = factory.getConnection()) {
             PreparedStatement statement = connection
                     .prepareStatement("SELECT c.nome, c.populacao_2010, c.area, ST_AsText(ST_AsEWKT(c.geom)),ST_AsSVG(geom), c.estado_id " +

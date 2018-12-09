@@ -29,16 +29,16 @@
                 <label>Cidade
                     <select name="cidade1">
                         <option>NENHUMA</option>
-                        <c:forEach var="cidade" items="${cidades1}">
+                        <c:forEach var="cidade" items="${cidadesNome1}">
                             <option ${cidade1 == cidade?'selected':''}>${cidade}</option>
                         </c:forEach>
                     </select>
                 </label><br><br>
                 <hr>
-                <label class="lab1">POPULAÇÃO: </label><br><br>
-                <label class="lab2">DENSIDADE DEMOGRAFICA: </label><br><br>
-                <label class="lab3">AREA: </label><br><br>
-                <label class="lab4">PERIMETRO: </label><br><br>
+                <label class="lab1">POPULAÇÃO: ${primeiraCidade.getPopulacao()} </label><br><br>
+                <label class="lab2">DENSIDADE DEMOGRAFICA: ${primeiraCidade.getDensidade_demo()} </label><br><br>
+                <label class="lab3">AREA: ${primeiraCidade.getArea()} </label><br><br>
+                <label class="lab4">PERIMETRO:  ${primeiraCidade.getPerimetro()} </label><br><br>
             </div>
 
             <div class="cidades">
@@ -54,20 +54,20 @@
                 <label>Cidade
                     <select name="cidade2">
                         <option>NENHUMA</option>
-                        <c:forEach var="cidade" items="${cidades1}">
+                        <c:forEach var="cidade" items="${cidadesNome2}">
                             <option ${cidade2 == cidade?'selected':''}>${cidade}</option>
                         </c:forEach>
                     </select>
                 </label><br><br>
                 <hr>
-                <label class="lab1">POPULAÇÃO: </label><br><br>
-                <label class="lab2">DENSIDADE DEMOGRAFICA: </label><br><br>
-                <label class="lab3">AREA: </label><br><br>
-                <label class="lab4">PERIMETRO: </label><br><br>
+                <label class="lab1">POPULAÇÃO: ${segundaCidade.getPopulacao()} </label><br><br>
+                <label class="lab2">DENSIDADE DEMOGRAFICA: ${segundaCidade.getDensidade_demo()} </label><br><br>
+                <label class="lab3">AREA: ${segundaCidade.getArea()} </label><br><br>
+                <label class="lab4">PERIMETRO:  ${segundaCidade.getPerimetro()} </label><br><br>
             </div>
 
             <div class="divMaior">
-                <label class="labeldistancia">DISTANCIA APROXIMADA: ${distancia}</label><br>
+                <label class="labeldistancia">DISTANCIA APROXIMADA: ${distanciaaproximada}</label><br>
                 <div class="divSvg">
                     <svg viewBox="" width="600" heigth="200">
                         <path d="${cidade1.getSvg()}" stroke="black" stroke-width="0.005" fill="orange" fill-opacity=""/>
