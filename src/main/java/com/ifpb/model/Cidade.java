@@ -9,15 +9,17 @@ public class Cidade {
     private Integer estado_id;
     private Float area;
     private Geometry geom;
+    private String svg;
 
     public Cidade(){};
 
-    public Cidade(String nome, Integer populacao, Integer estado_id, Float area, Geometry geom) {
+    public Cidade(String nome, Integer populacao, Integer estado_id, Float area, Geometry geom, String svg) {
         this.nome = nome;
         this.populacao = populacao;
         this.estado_id = estado_id;
         this.area = area;
         this.geom = geom;
+        this.svg = svg;
     }
 
     public String getNome() {
@@ -60,6 +62,13 @@ public class Cidade {
         this.geom = geom;
     }
 
+    public String getSvg() {
+        return svg;
+    }
+
+    public void setSvg(String svg) {
+        this.svg = svg;
+    }
 
     @Override
     public String toString() {
